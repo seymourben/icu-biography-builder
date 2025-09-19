@@ -2,10 +2,11 @@ import { Card, CardContent } from "./ui/card";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Badge } from "./ui/badge";
 import { Separator } from "./ui/separator";
+import { StaticImageData } from "next/image";
 
 export interface StaffMember {
   id: string;
-  photo: string;
+  photo: string | StaticImageData;
   name: string;
   role: string;
   pgyLevel?: string;
@@ -49,7 +50,7 @@ export function StaffCard({ staff }: StaffCardProps) {
         <div className="flex flex-col items-center mb-6">
           <div className="w-32 h-32 mb-4">
             <ImageWithFallback
-              src={staff.photo}
+              src={typeof staff.photo === 'string' ? staff.photo : staff.photo.src}
               alt={`${staff.name} photo`}
               className="w-full h-full object-cover rounded-full border-2 border-border"
             />

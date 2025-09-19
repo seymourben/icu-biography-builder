@@ -32,7 +32,7 @@ const sampleStaff: StaffMember[] = [
     name: "Dr. Krisoula Zahariou",
     role: "Senior Registrar",
     pgyLevel: "PGY-10",
-    competencies: ["Transport", "Central Lines", "ROTEM", "Airway", "Bronchoscopy", "ECMO"],
+    competencies: ["Transport", "Central Lines", "ROTEM", "Airway", "Bronchoscopy"],
     mainBackground: "Intensive Care",
     timeInICU: "7 years",
     learningStyles: "Bedside discussions and hands-on patient care; Didactic lectures; Teaching others;",
